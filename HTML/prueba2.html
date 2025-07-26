@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script type="text/javascript"> insertar tag con atributo type indicando el uso del lenguaje JavaScript
+    alert(“Mi primer mensaje usando JavaScript”);
+   </script>
+     <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center;     /* Centra verticalmente */
+      background-color: #f0f0f0;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+  
+  </style>
+</head>
+<body>
+    <form action="." oninput="range_control_value.value=range_control.valueASNumber">
+        <p>
+            <h2>FORMULARIO</h2>
+             <br/>
+          
+            Nombre:<input type="text" name="nome_control" autofocus required />
+         
+             <br/>
+         
+            Email:<input type="email" name="email_control" required />
+            <br/>
+           
+            URL:<input type="ulr" mame="url_control" placeholder="Escribe la URL de tu pagina web personal"/>
+             <br/>
+          
+            Fecha:<input type="date" name="date_control"/>
+            <br/>
+            Tiempo: <input type="time" name="time_control"/>
+            <br/>
+            Fecha y hora de nacimiento:<input type="datetime" name="datetime_contol"/>
+            <br/>
+            Mes:<input type="month" name="mont_control"/>
+            <br/>
+            Semana: <input type="week" name="week_control"/>
+            <br/>
+            Nùmero (min-10, max10): <input type="number" name="number_control" min="10" max="10" value="0"/>
+            <br/>
+            Intervalo (min 0,max 10): <input type="range" name="range_control" min="10" max="10" value="0"/>
+            <br/>
+            Teléfono:<input type="tel" name="tel_control"/>
+            <br/>
+            Término de búsqueda: <input type="search" name="search_control"/>
+            <br/>
+            Color Favorito:<input type="color" name="color_control"/>
+        </p>
+    </form>
+</body>
+</html>
