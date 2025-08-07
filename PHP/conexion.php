@@ -18,6 +18,11 @@ class DbConexion {
         }
         return self::$conn;
     }
+    public function closeDatabase(){
+        if($this->con != null){
+            $this->con === null;
+        }
+    }
 }
 
 
