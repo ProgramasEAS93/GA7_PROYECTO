@@ -1,7 +1,12 @@
 <?php
 
-    class consultas  extends dbconexion{
+/**
+ * Clase: consultas
+ * Descripción: Contiene métodos para realizar operaciones CRUD sobre la tabla 'tblproveedores'.
+ */
 
+    class consultas  extends dbconexion{
+        //Obtiene todos los proveedores ordenados por su código descendente.
         public function select_proveedores(){            
         $sqlp = dbconexion::conexion()->prepare("SELECT Codgenerado,TipoDocumento,Documento,RazonSocial,Correo,Telefono,Direccion,Contacto,NumeroContacto FROM tblproveedores order by  CodGenerado desc");
         $sqlp->execute();
@@ -24,7 +29,7 @@
             "INSERT INTO tblclientes (Codgenerado,TipoDocumento,Documento,RazonSocial,Correo,Telefono,Direccion,Contacto,NumeroContacto)
             VALUES (:Codgenerado, :TipoDocumento, :TipoDocumento, :Documento, :RazonSocial,:Correo,:Telefono,:Direccion,:Contacto,:NumeroContacto)"
     );
-
+        //Inserta un nuevo proveedor en la base de datos.
         $sqlp->bindParam(':Codgenerado', $Codgenerado);
         $sqlp->bindParam(':TipoDocumento', $TipoDocumento);
         $sqlp->bindParam(':Documento', $Documento);
@@ -42,7 +47,7 @@
         return false; // Puedes manejar el error más específicamente si lo deseas
     }
 }
-
+        //Obtiene los datos de un proveedor específico.
         public function obtener_proveedores($CodReferencia){
             $sqlp=dbconexion::conexion()->prepare("SELECT * FROM  tblproveedores WHERE Codgenerado='".$Codgenerado."'");
             if($sqlp -> execute()){

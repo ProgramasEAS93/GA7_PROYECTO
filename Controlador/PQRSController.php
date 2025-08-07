@@ -1,6 +1,6 @@
 <?php
     class consultas  extends dbconexion{
- 
+
         public function select_pqrs(){
             
         $sqlp = dbconexion::conexion()->prepare("SELECT CodPQR,FechaPQR,Descripcion,CodCliente,Solucion,FechaSolucion,NomContacto,NroContacto,Estado  FROM tblpqrs order by  CodPQR  Desc ");
@@ -9,8 +9,7 @@
         return $array;
     
         }
-
-      public function insertar_pqrs($FechaPQR,$Descripcion,$CodCliente,$Solucion,$FechaSolucion,$NomContacto,$Estado){
+        public function insertar_pqrs($FechaPQR,$Descripcion,$CodCliente,$Solucion,$FechaSolucion,$NomContacto,$Estado){
         $sqlp = dbconexion::conexion()->prepare("INSERT INTO tblpqrs(FechaPQR,Descripcion,CodCliente,Solucion,FechaSolucion,NroContacto,Estado )
                 VALUES ($FechaPQR,$Descripcion,$CodCliente,$Solucion,$FechaSolucion,$NomContacto,$NroContacto,$Estado)");
 
